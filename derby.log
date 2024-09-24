@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Sep 24 11:29:10 IST 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-0192-229c-baab-0000015431a0 
+on database directory memory:D:\projects\backend\matri-api-data\995b5ce1-ab78-409b-b0eb-d260a4b118b4 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@61e4705b 
+Loaded from file:/C:/Users/Gems/.m2/repository/org/apache/derby/derby/10.16.1.1/derby-10.16.1.1.jar
+java.vendor=Eclipse Adoptium
+java.runtime.version=21.0.4+7-LTS
+user.dir=D:\projects\backend\matri-api-data
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
