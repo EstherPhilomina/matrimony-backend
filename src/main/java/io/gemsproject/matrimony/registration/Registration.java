@@ -1,52 +1,50 @@
 package io.gemsproject.matrimony.registration;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import org.springframework.data.annotation.Id;
 
-
-@Entity
 public class Registration {
 	
 	@Id
-	private String st_id;
-	private String username;
-	private String phone_no;
+	private Number stId;
+	private String name;
+	private String password;
+	private Number phonenumber;
+	
 	
 	public Registration() {
 		
 	}
 	
-	public Registration(String username, String st_id, String phone_no, String password) {
+	public Registration(Number stId, String name, String password, Number phonenumber) {
 		super();
-		this.username = username;
-		this.st_id = st_id;
-		this.phone_no = phone_no;
-		this.password = password;
+		this.setUsername(name);
+		this.stId = stId;
+		this.setPhonenumber(phonenumber);
+		this.setPassword(password);
 	}
-	
+
 	public String getUsername() {
-		return username;
+		return name;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+
+	public void setUsername(String name) {
+		this.name = name;
 	}
-	public String getSt_id() {
-		return st_id;
-	}
-	public void setSt_id(String st_id) {
-		this.st_id = st_id;
-	}
-	public String getPhone_no() {
-		return phone_no;
-	}
-	public void setPhone_no(String phone_no) {
-		this.phone_no = phone_no;
-	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	private String password;
+
+	public Number getPhonenumber() {
+		return phonenumber;
+	}
+
+	public void setPhonenumber(Number phonenumber) {
+		this.phonenumber = phonenumber;
+	}
+	
 }

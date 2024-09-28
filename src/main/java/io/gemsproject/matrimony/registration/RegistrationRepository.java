@@ -1,9 +1,11 @@
 package io.gemsproject.matrimony.registration;
 
-import org.springframework.data.repository.CrudRepository;
+import java.util.List;
 
-public interface RegistrationRepository extends CrudRepository<Registration, String> {
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface RegistrationRepository extends MongoRepository<Registration, Number> {
 	
-	//get 
-
+	  public Registration findBystId(Number stId);
+	  public List<Registration> findByPhonenumber(Number phonenumber);
 }

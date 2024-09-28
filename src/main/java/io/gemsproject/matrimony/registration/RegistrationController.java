@@ -1,6 +1,5 @@
 package io.gemsproject.matrimony.registration;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,8 +23,8 @@ public class RegistrationController {
 	}
 	
 	@RequestMapping("/registration/{id}")
-	public Optional<Registration> getRegistrationDetail(@PathVariable("id") String st_id) {
-		return registrationService.getRegistartionDetail(st_id);
+	public Registration getRegistrationDetail(@PathVariable("id") int stId) {
+		return registrationService.getRegistartionDetail(stId);
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, value="/registration")
@@ -34,7 +33,7 @@ public class RegistrationController {
 	}
 	
 	@RequestMapping(method=RequestMethod.PUT, value="/forgetPassword/{id}")
-	public void updatePwd(@RequestBody Registration user, @PathVariable("id") String st_id) {
-		registrationService.updatePwd(user, st_id);
+	public void updatePwd(@RequestBody Registration user, @PathVariable("id") int stId) {
+		registrationService.updatePwd(user, stId);
 	}
 }

@@ -14,29 +14,25 @@ public class RegistrationService {
 	@Autowired
 	private RegistrationRepository registrationRepository;
 	
-	List<Registration> registration = new ArrayList<> (Arrays.asList(
-			new Registration("Esther", "3556", "9080780601", "Pwd@123"),
-			new Registration("Philomina", "3557", "9874563210", "Pwd@123")
-			));
-	
 	
 	public List<Registration> getRegistartionDetails() {
 		//return registration;
 		List<Registration> registration = new ArrayList<>();
-		registrationRepository.findAll().forEach(registration::add);
-		return registration;
+		return registrationRepository.findAll();
 	}
 	
-	public Optional<Registration> getRegistartionDetail(String st_id) {
-//		return registration.stream().filter(e -> e.getSt_id().equals(st_id)).findFirst().get();
-		return registrationRepository.findById(st_id);
+	public Registration getRegistartionDetail(Number stId) {
+//		return registration.stream().filter(e -> e.getstId().equals(stId)).findFirst().get();
+		System.out.println(stId);
+		return registrationRepository.findBystId(stId);
 	}
 
 	public void addUser(Registration user) {
 		registrationRepository.save(user);
 		
 	}
-	public void updatePwd(Registration user, String id) {
+	public void updatePwd(Registration user, Number stId) {
 		registrationRepository.save(user);
 	}
+
 }
