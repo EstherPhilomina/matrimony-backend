@@ -50,9 +50,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-		    <groupId>org.hibernate</groupId>
-		    <artifactId>hibernate-core</artifactId>
-		    <version>5.0.7.Final</version>
+			<groupId>io.gemsproject.matrimony</groupId>
+			<artifactId>matri-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 

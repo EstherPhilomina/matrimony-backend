@@ -21,18 +21,21 @@ public class RegistrationService {
 		return registrationRepository.findAll();
 	}
 	
-	public Registration getRegistartionDetail(Number stId) {
-//		return registration.stream().filter(e -> e.getstId().equals(stId)).findFirst().get();
-		System.out.println(stId);
-		return registrationRepository.findBystId(stId);
+	public Registration getRegistartionDetail(String stNo) {
+//		return registration.stream().filter(e -> e.getstNo().equals(stNo)).findFirst().get();
+		System.out.println(stNo);
+		return registrationRepository.findByStaffnumber(stNo);
 	}
 
 	public void addUser(Registration user) {
 		registrationRepository.save(user);
 		
 	}
-	public void updatePwd(Registration user, Number stId) {
+	public void updatePwd(Registration user, String stNo) {
 		registrationRepository.save(user);
+	}
+	public void deleteDetail(String stNo) {
+//		registrationRepository.delete(stNo);
 	}
 
 }

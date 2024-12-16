@@ -1,14 +1,17 @@
 package io.gemsproject.matrimony.registration;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document(collection = "Registration")
 public class Registration {
 	
 	@Id
-	private Number stId;
-	private String name;
+	private ObjectId _id;
+	private String staffnumber;
+	private String username;
 	private String password;
 	private Number phonenumber;
 	
@@ -17,20 +20,27 @@ public class Registration {
 		
 	}
 	
-	public Registration(Number stId, String name, String password, Number phonenumber) {
+	public Registration(String staffnumber, String username, String password, Number phonenumber) {
 		super();
-		this.setUsername(name);
-		this.stId = stId;
+		this.setUsername(username);
+		this.setStaffnumber(staffnumber);
 		this.setPhonenumber(phonenumber);
 		this.setPassword(password);
 	}
-
-	public String getUsername() {
-		return name;
+	public String getStaffnumber() {
+		return staffnumber;
 	}
 
-	public void setUsername(String name) {
-		this.name = name;
+	public void setStaffnumber(String staffnumber) {
+		this.staffnumber = staffnumber;
+	}
+	
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
