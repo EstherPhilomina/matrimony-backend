@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 public class MatriDetails {
 	@Id
-	private Number matriNo;
+	private Integer matriNo;
 	private String fullName;
 	private String gender;
 	private Date dob;
@@ -53,7 +53,7 @@ public class MatriDetails {
 		
 	}
 	
-	public MatriDetails(Number matriNo, String fullName, String gender, Date dob, Number age, String maritalStatus, Number phoneNumber, String address,
+	public MatriDetails(Integer matriNo, String fullName, String gender, Date dob, Number age, String maritalStatus, Number phoneNumber, String address,
 			String email, String motherTongue, String place, Number height, Number weight, String isChallenged, String education, String occupation,
 			String company, Number salary, String fatherName, String fatherOcc, String motherName, String motherOcc, String broSis,
 			String hasSaved, Date doBaptism, String denomination, String churchAddr, Number pastorNo, String music, String singing,

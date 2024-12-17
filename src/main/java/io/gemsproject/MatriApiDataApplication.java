@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRep
 
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.baeldung.dependency.exception"})
+
 public class MatriApiDataApplication {
 	
 	public static void main(String[] args) {
